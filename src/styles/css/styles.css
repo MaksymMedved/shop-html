@@ -1,0 +1,123 @@
+@font-face {
+  font-family: SourceSansPro;
+  src: url("../../assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: Cormorant;
+  src: url("../../assets/fonts/Cormorant/Cormorant-Bold.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: SourceSansPro;
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #dadada !important;
+}
+
+.btn:active {
+  background: #9e9e9e !important;
+  color: #ffffff;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1330px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  height: 80px;
+}
+.header .container {
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .container .category-list {
+  justify-content: space-between;
+  width: 250px;
+}
+.header .container .category-list .category-item a {
+  color: #000000;
+}
+.header .container .category-list .category-item a:hover {
+  color: #9e9e9e !important;
+}
+.header .container .logo {
+  font-family: Cormorant;
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: bold;
+}
+
+nav {
+  background: #2D2D2D !important;
+  color: #ffffff;
+  height: 50px;
+  align-items: center;
+}
+nav .container {
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .container .nav-list {
+  width: 650px;
+  justify-content: space-between;
+}
+nav .container .nav-list .nav-item a {
+  color: #ffffff;
+}
+nav .container .nav-list .nav-item a:hover {
+  color: #9e9e9e !important;
+}
+nav .container .search-field {
+  width: 245px;
+  height: 30px;
+  margin-left: 15px;
+}
+nav .container .search-field input[type=text] {
+  width: 245px;
+  height: 100%;
+}
+nav .container .search-field .btn {
+  width: 65px;
+  height: 100%;
+  background: #F7F7F7;
+  border-left: 0.25px solid #000000;
+}
+
+/*# sourceMappingURL=styles.css.map */

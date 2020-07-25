@@ -1,0 +1,123 @@
+@font-face {
+    font-family: SourceSansPro;
+    src: url('../../assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Cormorant;
+    src: url('../../assets/fonts/Cormorant/Cormorant-Bold.ttf') format('truetype');
+}
+
+$bg-nav: #2D2D2D!important;
+$bg-hovered: #dadada!important;
+$font-color-general: #000000;
+$font-color-reversed: #ffffff;
+$font-color-hovered: #9e9e9e!important;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: SourceSansPro;
+    font-size: 14px;
+    line-height: 18px;
+    outline: none;
+    border: none;
+}
+li { list-style: none; }
+a { text-decoration: none; }
+.btn {
+    position: relative;
+    cursor: pointer;
+}
+.btn:hover {
+    background: $bg-hovered;
+}
+.btn:active {
+    background: $font-color-hovered;
+    color: $font-color-reversed;
+}
+.d-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.wrapper {
+    min-height: 100vh;
+}
+.container {
+    max-width: 1330px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    height: 80px;
+    .container {
+        .category-list {
+            justify-content: space-between;
+            width: 250px;
+            .category-item {
+                a{
+                    color: $font-color-general;
+                    &:hover {
+                        color: $font-color-hovered;
+                    }
+                }
+            }
+        }
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            font-family: Cormorant;
+            font-size: 36px;
+            line-height: 44px;
+            font-weight: bold;
+        }
+    }
+}
+
+nav {
+    background: $bg-nav;
+    color: $font-color-reversed;
+    height: 50px;
+    align-items: center;
+    .container {
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        .nav-list {
+            width: 650px;
+            justify-content: space-between;
+            .nav-item {
+                a {
+                    color: $font-color-reversed;
+                    &:hover {
+                        color: $font-color-hovered;
+                    }
+                }
+            }
+        }
+        .search-field {
+            width: 245px;
+            height: 30px;
+            margin-left: 15px;
+            input[type="text"] {
+                width: 245px;
+                height: 100%;
+            }
+            .btn {
+                width: 65px;
+                height: 100%;
+                background: #F7F7F7;
+                border-left: .25px solid $font-color-general;
+            }
+            
+        }
+    }
+}
