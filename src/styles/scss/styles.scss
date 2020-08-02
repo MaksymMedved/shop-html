@@ -24,11 +24,19 @@ $font-color-hovered: #9e9e9e!important;
     outline: none;
     border: none;
 }
+
+h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+}
 li { list-style: none; }
-a { text-decoration: none; }
+a { text-decoration: none; color: $font-color-general;}
 .btn {
     position: relative;
     cursor: pointer;
+    transition: all .1s linear;
 }
 .btn:hover {
     background: $bg-hovered;
@@ -55,6 +63,41 @@ a { text-decoration: none; }
     padding: 0 15px;
 }
 
+.section-header {
+    align-items: center;
+    justify-content: space-between;
+    .hline {
+        border-bottom: .25px solid black;
+        width: 100%;
+        height: 0;
+    }
+    p {
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: normal;
+        padding: 10px;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
+
+.cover-img {
+    position: relative;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: filter .2s linear;
+    .image-link {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+    &:hover {
+        filter: drop-shadow(2px 4px 6px black) grayscale(.6);
+    }
+}
+
 .header {
     height: 80px;
     .container {
@@ -62,8 +105,9 @@ a { text-decoration: none; }
             justify-content: space-between;
             width: 250px;
             .category-item {
-                a{
+                a {
                     color: $font-color-general;
+                    transition: all .1s linear;
                     &:hover {
                         color: $font-color-hovered;
                     }
@@ -97,6 +141,7 @@ nav {
             .nav-item {
                 a {
                     color: $font-color-reversed;
+                    transition: all .1s linear;
                     &:hover {
                         color: $font-color-hovered;
                     }
@@ -118,6 +163,97 @@ nav {
                 border-left: .25px solid $font-color-general;
             }
             
+        }
+    }
+}
+
+main {
+    padding: 40px 0;
+    section:not(:first-child) {
+        margin-top: 80px;
+    }
+    section.start {
+        height: 710px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+            
+        .start-top {
+            grid-area: 1 / 1 / 2 / 3;
+            background-image: url("../../assets/img/start-top.png");
+        }
+        .start-right {
+            grid-area: 1 / 3 / 3 / 4;
+            background-image: url("../../assets/img/start-right.png");
+        }
+        .start-bottom-left {
+            grid-area: 2 / 1 / 3 / 2;
+            background-image: url("../../assets/img/start-bottom-left.png");
+        }
+        .start-bottom-right {
+            grid-area: 2 / 2 / 3 / 3;
+            background-image: url("../../assets/img/start-bottom-right.png");
+        }
+        .img-text-container {
+            position: absolute;
+            bottom: 10px;
+            margin: 0 auto;
+            left: 50%;
+            transform: translate(-50%, 0);
+            div {
+                margin: 10px auto;
+                padding: 10px;
+                text-align: center;
+                color: $font-color-general;
+                background: $font-color-reversed;
+                width: 200px;
+                &:first-child {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 23px;
+                    width: 225px;
+                }
+            }
+        }
+    }
+
+    section.trends {
+        .cards-container {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .trends-card {
+            margin: 50px 0;
+            .card-img {
+                width: 310px;
+                height: 450px;
+                // border: .25px solid $font-color-general;
+            }
+            .card-title {
+                text-align: center;
+            }
+            a:hover {
+                color: $font-color-hovered;
+            }
+        }
+    }
+    section.best-sellers {
+        .cards-container {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+            .card {
+                width: 236px;
+                height: 410px;
+                position: relative;
+                .card-image {
+                    width: 100%;
+                    height: 300px;
+                    border: .25px solid $font-color-general;
+                }
+            }
         }
     }
 }
